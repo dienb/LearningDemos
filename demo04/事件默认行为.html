@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>事件默认行为</title>
+	</head>
+	<body>
+		<!-- 阻止默认行为的方式：eventpreventDefault();event.returnValue = false;return false -->
+		<a href="">test</a>
+		<form action="" method="post">
+			<input type="text"/>
+			<input type="submit" value="提交"/>
+		</form>
+		<script type="text/javascript">
+			var oLink = document.getElementsByTagName("a")[0];
+			var oForm = document.getElementsByTagName("form")[0];
+			var aInput = document.getElementsByTagName("input");
+			oLink.onclick = function(e){
+				var evt = e||event;
+				console.log("aaa");
+				return false;
+				evt.returnValue = false;
+				evt.prevrntDefault();
+			}
+			oForm.onsubmit = function(){
+				console.log("bbb");
+				return false;
+			}
+			aInput[0].onkeydown = function(){
+				return false;
+			}
+			document.oncontextmenu = function(){
+				return false;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jQuery冲突问题</title>
+	</head>
+	<body>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			//引入的另外JS文件用到$符号
+			//释放$的使用权，用jQuery。jQuery.noConflict();
+			//或自定义一个访问符号
+			//var 变量名 = jQuery.noConflict();
+			         var J=jQuery.noConflict();
+			J(function () {
+			             alert("Hello World1")；
+			         });
+		</script>
+	</body>
+</html>

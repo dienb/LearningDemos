@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>事件</title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body id = "body">
+		<div id="div1" >div</div>
+		<form action="" method="get"> <!-- target="_blank" -->
+			<input type="text">
+			<input type="submit" value="提交">
+		</form>
+	</body>
+	<script type="text/javascript">
+		var oDiv = document.getElementById("div1");
+		var oForm = document.getElementsByTagName("form")[0];
+		var aInput = document.getElementsByTagName("input");
+		// oDiv.onclick = function(){
+		// 	alert(oDiv.innerHTML);
+		// }
+		// oDiv.onmouseover = function(){
+		// 	alert(this.innerText);
+		// }
+		// oDiv.onmousedown = function(){
+		// 	alert("mousedown");
+		// }
+		// oDiv.onmouseup = function(){
+		// 	alert("mouseup");
+		// }
+		oForm.onsubmit = function(){
+			console.log("submit");
+			return false;
+		}
+		aInput[0].onfocus = function(){
+			console.log("focus");
+		}
+		aInput[0].onblur = function(){
+			console.log("blur");
+		}
+		aInput[0].onchange = function(){
+			console.log("change");
+		}
+		aInput[0].oninput = function(){
+			console.log("input");
+		}
+	</script>
+</html>

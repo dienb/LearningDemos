@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>demo2-入口函数</title>
+	</head>
+	<body>
+		<div style="width: 50px; height: 50px; background-color: lightblue">1</div>
+		<div>2</div>
+		<div>3</div>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			window.onload = function (ev) {
+				var div1 = document.getElementsByTagName("div")[0];
+				// console.log(div1.innerText);
+
+				var width1 = window.getComputedStyle(div1).width;
+				console.log("onload", width1);
+			};
+			//JS入口函数会等到DOM元素和图片加载完成后执行
+			//原生JS如果编写了多个入口函数，后面编写的会覆盖前面的
+			// window.onload = function (ev) {
+			// 	console.log("Hello World");
+			// };
+
+			//jQuery入口函数会等到DOM元素加载完成，不会等图片加载完成
+			$(document).ready(function () {
+				//通过jQuery入口函数可以拿到DOM元素
+				var $div1 = $("div")[0];
+				// console.log($div1.innerText);
+
+				//通过jQuery入口函数拿到DOM元素的宽高
+				var $width1 = $div1.style.width;
+				console.log("ready", $width1);
+			});
+			// $(document).ready(function () {
+			// 	console.log("Hello World");
+			// });
+			$(function () {
+				alert("Hello World");
+			});
+		</script>
+	</body>
+</html>

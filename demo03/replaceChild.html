@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>replace</title>
+		<script type="text/javascript">
+			// replaceChild()
+			// parent.replaceChild(newNode, oldNode);
+			// 用newNode将oldNode替换掉.
+			
+			// cloneNode()
+			// 格式:克隆节点, 返回值:新克隆的节点.
+			
+			// removeChild()
+			// node.parentNode.removeChild()
+			// 删除节点.
+			
+			window.onload = function(){
+				// var oDiv = document.getElementById("div1");
+				// var node = document.createElement("strong");
+				
+				// oDiv.parentNode.replaceChild(node, oDiv);
+				
+				var oDiv = document.getElementById("div1");
+				var oSpan = document.getElementsByTagName("span")[0];
+				
+				var node = oDiv.cloneNode(true);
+				oSpan.parentNode.insertBefore(node, oSpan);
+				
+				oDiv.parentNode.removeChild(oDiv);
+			}
+		</script>
+	</head>
+	<body>
+		<span>span</span>
+		<div id = "div1">div</div>
+		<p>p</p>
+		<!-- <span>span</span> -->
+	</body>
+</html>

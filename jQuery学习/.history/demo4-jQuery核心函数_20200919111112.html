@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>demo4-jQuery核心函数</title>
+	</head>
+	<body>
+		<div class="div1">DIV1</div>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			//$();代表调用jQuery核心函数
+
+			//1、接受一个函数
+			$(function () {
+				console.log("Hello World!");
+				//2、接受一个字符串
+
+				//2.1接受一个字符串选择器
+				var div1 = $(".div1");
+				console.log(div1.innerText);
+				//2.2接受一个字符串代码片段
+				var p = $("<p>PPP</p>");
+				console.log(p);
+				div1.append(p);
+				//3、接受一个DOM元素
+			});
+		</script>
+	</body>
+</html>

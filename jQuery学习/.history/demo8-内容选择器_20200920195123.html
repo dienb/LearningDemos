@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery内容选择器</title>
+</head>
+
+<body>
+    <div></div>
+    <div>DIV1</div>
+    <div>DIV2</div>
+    <div><span>span</span></div>
+    <div>
+        <p>p</p>
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var div0 = $("div:empty");
+            console.log(div0);
+            var div1 = $("div:parent");
+            console.log(div1);
+            var div2 = $("div:contains('DIV1')");
+            console.log(div2);
+            var div3 = $("div:has('span')")
+        });
+    </script>
+</body>
+
+</html>

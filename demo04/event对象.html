@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>event</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#div1{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- e.clientX:鼠标距离当前左边框的距离; e.clientY:鼠标距离当前上边框的距离。e.pageX:鼠标距离页面左边框的距离；e.pageY:鼠标距离页面顶部边框的距离。e.offsetX:鼠标距离事件源的左边距e.offsetY:鼠标距离事件源的上边距。-->
+		<div id="div1">
+			div
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oDiv = document.getElementById("div1");
+		oDiv.onclick = function(e){
+			var evt = e||event;
+			console.log(evt.clientX,evt.clientY);
+			console.log(evt.pageX,evt.pageY);
+			console.log(evt.offsetX,evt.offsetY);
+		}
+	</script>
+</html>

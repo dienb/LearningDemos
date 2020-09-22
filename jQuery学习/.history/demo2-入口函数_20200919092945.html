@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>demo2-入口函数</title>
+	</head>
+	<body>
+		<div style="width: 50px; height: 50px; background-color: lightblue">1</div>
+		<div>2</div>
+		<div>3</div>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			window.onload = function (ev) {
+				var div1 = document.getElementsByTagName("div")[0];
+				// console.log(div1.innerText);
+				var width1 = window.getComputedStyle(div)[0].width;
+				console.log(width1);
+			};
+
+			$(document).ready(function () {
+				var $div1 = $("div")[0];
+				// console.log($div1.innerText);
+			});
+		</script>
+	</body>
+</html>

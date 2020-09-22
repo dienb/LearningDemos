@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类的操作方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .class1 {
+            height: 50px;
+            width: 50px;
+        }
+
+        .class2 {
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>添加类</button>
+    <button>删除类</button>
+    <button>切换类</button>
+    <div>
+        DIV1
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+        /* 1、addClass(class|fn)
+           2、removeClass([class|fn])
+           3、toggleClass(class|fn[,sw])
+        */
+        $(document).ready(function () {
+            var btns = document.getElementsByTagName("button");
+            btns[0].onclick = function () {
+                $("div").addClass("class1 class2");
+            }
+            btn[1].onclick = function () {
+                $("div").removeClass("class1");
+            }
+            // btns[3].onclick = function () {
+            //     $("div").toggleClass()
+            // }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Class</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class Person{
+				//构造函数
+				constructor(name){
+					this.name = name;
+				}
+				//方法
+				sayHello(){
+					console.log(this.name);
+				}
+			}
+			var person = new Person("Dienbco");
+			console.log(person.name);
+			person.sayHello();
+			
+		</script>
+	</body>
+</html>

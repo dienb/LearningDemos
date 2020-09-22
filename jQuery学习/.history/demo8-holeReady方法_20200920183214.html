@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holdReady方法</title>
+</head>
+
+<body>
+    <button>恢复</button>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+        $.holdReady(true);
+        $(document).ready(function () {
+            alert("ready!");
+        });
+        var btn = $("button");
+        btn.onclick = function () {
+            $.holdReady(false);
+        }
+    </script>
+</body>
+
+</html>

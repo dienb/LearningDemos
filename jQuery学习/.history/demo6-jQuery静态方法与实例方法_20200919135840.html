@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jQuery静态方法和实例方法</title>
+	</head>
+	<body>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			$(function () {
+				function reverseInPlace(str) {
+					return str.split(" ").reverse().join(" ").split("").reverse().join("");
+				}
+				console.log(reverseInPlace("I am the good boy"));
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DOM2级事件</title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 添加事件监听器：addEventListener(事件名，处理函数，布尔值false:冒泡 true:捕获)
+		移除事件监听器：removeEventListener(事件名，处理函数)
+		IE下的事件监听器：attachEvent(事件名，处理函数)
+		detachEvent(事件名，处理函数) -->
+		<div id="div1">
+			<div id="div2"></div>
+		</div>
+		<script type="text/javascript">
+			var outer = document.getElementById("div1");
+			var inner = document.getElementById("div2");
+			
+			// outer.onclick = foo;
+			// outer.onclick = bar;
+			// outer.onclick = null;
+			
+			//inner.addEventListener("click",bae,true);
+			//outer.addEventListener("click",foo,false);
+			// outer.addEventListener("click",bar,false);
+			// outer.removeEventListener("click",foo);
+			// outer.removeEventListener("click",bar);
+			
+			function foo(){
+				console.log("outer1");
+			}
+			function bar(){
+				console.log("outer2");
+			}
+			function bae(){
+				console.log("inner");
+			}
+			
+			// IE8:
+			// outer.attachEvent("onclick",foo);
+			// outer.detachEvent("onclick",foo);
+			
+			function addEvent(obj,type,fun){
+				if(obj.addEventListener){
+					obj.addEventListener(type,fun,false);
+				}else{
+					obj.attachEvent("on" + type,fun);
+				}
+			}
+			
+			function removeEvent(){
+				if(obj.removeEvent){
+					obj.removeEventListener(type,fun,false);
+				}else{
+					obj.detachEvent("on" + type,fun);
+				}
+			}
+			addEvent(outer,"click",foo);
+			// removeEvent(outer,"click",foo);
+		</script>
+	</body>
+</html>

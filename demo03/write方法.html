@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>write方法</title>
+		<style type="text/css">
+			#div1{
+				width: 300px;
+				heigth: 300px;
+				background-color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			windows.onload = function(){
+			var oBtn = document.getElementById("btn");
+			oBtn.onclick = function(){
+				document.write("<h1>我是标题内容</h1>");
+				//document.write()添加内容时，会将原有的页面内容覆盖。
+				}
+			}
+		</script>
+	<body>
+		<div id="div1"></div>
+		<button id = "btn"></button>
+	</body>
+	</head>
+</html>

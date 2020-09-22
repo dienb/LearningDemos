@@ -1,0 +1,13 @@
+不成对出现的标签包括：meta、link、img、hr、br、input、col
+<title>网页名</title>
+<h1>标题</h1>（h1-h6）、<p>段落</p>
+<i>斜体</i>、<b>加粗</b>、<hr>横线、<br>段内转行、<del>加删除线</del>、<sup>上标</sup>
+<u>下划线</u>、<center>置中</center>、<ul type="disc(circle、square)"><li>无序列表（实心圆、空心圆、实心矩形）</li></ul>
+<ol type="1(a、A、i、Ⅰ)"><li>有序列表（数字、小写字母、大写字母、罗马小写、大写）</li></ol>
+<align="center(left、right)">置中(左、右)、<font size="" color="">字体大小、颜色
+<img src="" width="××px(100%)">图片资源（宽多少px、页面100%）、<a href="">超链接</a>
+<table border="" cellspacing="0"><tbody><tr><td>表格、行、列</td></tr></tbody></table>、&nbsp;（空格）
+<form action="https://...">表单</form>、<input type="text(submit、reset)" value="" />
+<input type="text(password)" name="" />
+<colgroup span="6" width="××px">、<colspan=""、rowspan="">
+绝对路径和相对路径、get和post请求的区别（get一般用于获取数据，在链接上会显示上传的信息，获取目标链接信息，post主要用于上传数据，不显示）

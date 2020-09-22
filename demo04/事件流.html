@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>事件流</title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 捕获>目标>冒泡 -->
+		<div id="div1">
+			<div id="div2"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var outer = document.getElementById("div1");
+		var inner = document.getElementById("div2");
+		outer.onclick = function(){
+			console.log("outer");
+		}
+		inner.onclick = function(e){
+			var evt = e||event;
+			console.log("inner");
+			//阻止冒泡
+			evt.cancelBubble = true;
+			//evt.stopPropagation();
+		}
+	</script>
+</html>

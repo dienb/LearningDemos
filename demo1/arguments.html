@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<script type="text/javascript">
+		/* function sum(){
+			var sum = 0; 
+			for(var i = 0; i < arguments.length; i++)
+			sum += arguments[i]; 
+			alert(sum); 
+		}
+		sum(1, 2, 3, 4); */
+		function print(n){
+			if(n == 0){
+				return;
+			}
+			document.write("Hello World!<br /> ");
+			return print(n - 1);
+		}
+		print(10);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>正则表达式</title>
+	</head>
+	<body>
+		<!-- 正则表达式是由普通字符及特殊字符组成的对字符串进行过滤的逻辑公式。 -->
+		<script type="text/javascript">
+			//创建方式:1、字面量的方式
+			var reg = /abc/;
+			//2、构造函数
+			var reg = new RegExp("abc");
+			
+			//正则表达式的test方法：用来检测字符串中是否有符合规则的子串，有则返回true，无则返回false
+			var str = "abc";
+			var flag = reg.test(str);
+			console.log(flag);
+			
+			//修饰符：g:全局匹配
+			var reg = /abc/g;
+			var str = "Abcabc";
+			//match方法，字符串方法
+			console.log(str.match(reg));
+			//i:忽略大小写
+			var reg = /abc/i;
+			var str = "Abcabc";
+			console.log(str.match(reg));
+			//search方法：用于查找符合规则的子串的位置，只返回第一个匹配成功的位置
+			var reg = /abc/;
+			var str = "12345abc";
+			console.log(str.search(reg));//5
+			//split
+			var reg = /good/;
+			var str = "good good study!";
+			console.log(str.split(reg));
+			//replace
+			var reg = /tmd/;
+			var str = "abc tmd abc TMD AbC Tmd";
+			console.log(str.replace(reg,"*"));//返回替换后的字符串
+			var reg = /tmd/i;
+			var str = "abc tmd abc TMD AbC Tmd";
+			console.log(str.replace(reg,"*"));
+			var reg = /tmd/g;
+			var str = "abc tmd abc TMD AbC Tmd";
+			console.log(str.replace(reg,"*"));
+			var reg = /tmd/gi;
+			var str = "abc tmd abc TMD AbC Tmd";
+			console.log(str.replace(reg,"*"));
+			//exec：正则表达式的方法，将匹配成功的内容放到数组里，如果匹配不成功则返回null。
+			var reg = /good/g;
+			var str = "good good study";
+			console.log(reg.exec(str));
+			console.log(reg.exec(str));
+			console.log(reg.exec(str));
+		</script>
+	</body>
+</html>

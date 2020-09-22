@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		用户名:<input type="text" id="username" />(数字，字母，下划线组成的6-15位字符，且不能以数字开头)
+		<input type="button" id="btn" value="提交" />
+		<script type="text/javascript">
+			var aInput = document.getElementById("username");
+			aInput.onchange = function(){
+				var str = this.value;
+				var reg = /^[a-zA-Z_]\w{5,14}$/;
+				if(reg.test(str)){
+					console.log("命名成功!");
+				}else{
+					console.log("命名不符合规范，请重新输入!");
+				}
+			}
+		</script>
+	</body>
+</html>

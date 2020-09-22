@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性和属性节点</title>
+</head>
+
+<body>
+    <div>
+        <span class="span1" name="span1">span1</span>
+        <span class="span2" name="span2">span2</span>
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            function Person() {};
+            // var p = new Person();
+            // p.name = "dienbco";
+            // console.log(p.name);
+            // p["name"] = "dienbco";
+            // console.log(p.name);
+
+            // DOM元素.setAttribute("属性名称"，"值")；
+            // DOM元素.getAttribute("属性名称");
+            // var span = $("span")[0];
+            // span.setAttribute("name", "span");
+            // console.log(span.getAttribute("name"));
+
+            // console.log($("span").attr("class"));
+
+            // $("span").attr("class", "box");
+            // 添加一个属性box1，值为box2
+            // $("span").attr("box1", "box2");
+            // $("span").removeAttr("class name");
+
+            $("span").eq(0).prop("demo", "dienbco");
+            $("span").eq(1).prop("demo", "Dienbco");
+            console.log($("span").prop("demo"));
+            console.log($("span").prop("class"));
+            $("span").prop("class", "box");
+
+
+            $("span").removeProp("demo");
+
+        });
+    </script>
+</body>
+
+</html>

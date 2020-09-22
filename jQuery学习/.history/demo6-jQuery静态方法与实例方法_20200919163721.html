@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jQuery静态方法和实例方法</title>
+	</head>
+	<body>
+		<script src="./jquery-3.5.1.js"></script>
+		<script>
+			function AClass() {}
+
+			//静态方法
+			AClass.StaticMethod = function () {
+				alert("StaticMethod.");
+			};
+			AClass.StaticMethod();
+
+			//实例方法
+			AClass.prototype.instanceMethod = function () {
+				alert("instanceMethod.");
+			};
+			var a = new AClass();
+			a.instanceMethod();
+		</script>
+	</body>
+</html>
